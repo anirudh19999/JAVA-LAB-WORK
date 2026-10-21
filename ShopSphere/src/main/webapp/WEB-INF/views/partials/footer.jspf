@@ -1,0 +1,3 @@
+</main>
+<footer class="site-footer"><div><a class="brand footer-brand" href="${pageContext.request.contextPath}/">ShopSphere</a><span>Thoughtful finds for everyday living.</span></div><small>Learning project · Mock checkout · No real payment processing</small></footer>
+</body></html>

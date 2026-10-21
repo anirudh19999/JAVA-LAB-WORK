@@ -1,0 +1,16 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><c:out value="${pageTitle}"/> · ShopSphere</title>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/styles.css">
+</head>
+<body>
+<header class="site-header"><a class="brand" href="${pageContext.request.contextPath}/"><span class="brand-mark">S</span> ShopSphere</a>
+  <form class="nav-search" action="${pageContext.request.contextPath}/products" method="get"><input name="q" value="<c:out value='${query}'/>" aria-label="Search products" placeholder="Search the collection"><button aria-label="Search">⌕</button></form>
+  <nav><a href="${pageContext.request.contextPath}/products">Shop</a><a href="${pageContext.request.contextPath}/cart">Cart</a>
+  <c:choose><c:when test="${not empty sessionScope.user}"><c:if test="${sessionScope.user.admin}"><a href="${pageContext.request.contextPath}/admin/products">Admin</a></c:if><a href="${pageContext.request.contextPath}/orders">Orders</a><form class="inline" action="${pageContext.request.contextPath}/logout" method="post"><button class="nav-button">Sign out</button></form></c:when><c:otherwise><a class="nav-account" href="${pageContext.request.contextPath}/account">Sign in</a></c:otherwise></c:choose>
+  </nav>
+</header>
+<main class="page-shell">

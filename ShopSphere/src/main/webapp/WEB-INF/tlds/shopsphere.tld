@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-jsptaglibrary_3_0.xsd"
+        version="3.0">
+  <tlib-version>1.0</tlib-version><short-name>ss</short-name><uri>https://shopsphere.example/tags</uri>
+  <tag><name>stockStatus</name><tag-class>com.shopsphere.web.StockStatusTag</tag-class><body-content>empty</body-content>
+    <attribute><name>stock</name><required>true</required><rtexprvalue>true</rtexprvalue><type>int</type></attribute>
+  </tag>
+</taglib>
